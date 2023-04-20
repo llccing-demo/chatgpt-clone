@@ -121,7 +121,7 @@ export default function NewConversationMenu() {
           >
             {icon}
             <span className="max-w-0 overflow-hidden whitespace-nowrap px-0 text-slate-600 transition-all group-hover:max-w-[80px] group-hover:px-2 group-data-[state=open]:max-w-[80px] group-data-[state=open]:px-2 dark:text-slate-300">
-              New Topic
+              模型选择
             </span>
           </Button>
         </DropdownMenuTrigger>
@@ -129,7 +129,7 @@ export default function NewConversationMenu() {
           className="min-w-[300px] dark:bg-gray-700"
           onCloseAutoFocus={event => event.preventDefault()}
         >
-          <DropdownMenuLabel className="dark:text-gray-300">Select an Endpoint</DropdownMenuLabel>
+          <DropdownMenuLabel className="dark:text-gray-300">选择默认模型</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup
             value={endpoint}
@@ -149,9 +149,9 @@ export default function NewConversationMenu() {
           <div className="mt-6 w-full" />
 
           <DropdownMenuLabel className="flex items-center dark:text-gray-300">
-            <span>Select a Preset</span>
+            <span>选择自定义模型</span>
             <div className="flex-1" />
-            <FileUpload onFileSelected={importPreset} />
+            {/* <FileUpload onFileSelected={importPreset} /> */}
             <Dialog>
               <DialogTrigger asChild>
                 <label
@@ -163,13 +163,13 @@ export default function NewConversationMenu() {
                   className="h-auto bg-transparent px-2 py-1 text-xs font-medium font-normal text-red-700 hover:bg-slate-200 hover:text-red-700 dark:bg-transparent dark:text-red-400 dark:hover:bg-gray-800 dark:hover:text-red-400"
                 > */}
                   <Trash2 className="mr-1 flex w-[22px] items-center stroke-1" />
-                  Clear All
+                  全部删除
                   {/* </Button> */}
                 </label>
               </DialogTrigger>
               <DialogTemplate
-                title="Clear presets"
-                description="Are you sure you want to clear all presets? This is irreversible."
+                title="删除自定义模型"
+                description="您确定要清除所有自定义模型吗？这是不可逆转的。"
                 selection={{
                   selectHandler: clearAllPresets,
                   selectClasses: 'bg-red-600 hover:bg-red-700 dark:hover:bg-red-800 text-white',
@@ -191,7 +191,7 @@ export default function NewConversationMenu() {
                 onDeletePreset={onDeletePreset}
               />
             ) : (
-              <DropdownMenuLabel className="dark:text-gray-300">No preset yet.</DropdownMenuLabel>
+              <DropdownMenuLabel className="dark:text-gray-300">没有自定义模型</DropdownMenuLabel>
             )}
           </DropdownMenuRadioGroup>
         </DropdownMenuContent>

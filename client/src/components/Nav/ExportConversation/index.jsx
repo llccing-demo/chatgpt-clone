@@ -31,7 +31,7 @@ export default function ExportConversation() {
         onClick={clickHandler}
       >
         <Download size={16} />
-        Export conversation
+        导出对话
       </button>
 
       <ExportModel

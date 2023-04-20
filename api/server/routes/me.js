@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
     if (user) res.send(JSON.stringify({ username: user?.username, display: user?.display }));
     else res.send(JSON.stringify(null));
   } else {
-    res.send(JSON.stringify({ username: 'anonymous_user', display: 'Anonymous User' }));
+    res.send(JSON.stringify({ username: 'anonymous_user', display: '注销用户' }));
   }
 });
 

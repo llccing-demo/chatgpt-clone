@@ -40,7 +40,7 @@ export default function ModelItem({ endpoint, value, onSelect }) {
             }}
           >
             <Settings className="mr-1 inline-block w-[16px] items-center stroke-1" />
-            Config Token
+            设置APIKEY
           </button>
         ) : null}
       </DropdownMenuRadioItem>

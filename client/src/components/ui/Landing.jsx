@@ -33,7 +33,7 @@ export default function Landing() {
     <div className="flex h-full flex-col items-center overflow-y-auto pt-0 text-sm dark:bg-gray-800">
       <div className="w-full px-6 text-gray-800 dark:text-gray-100 md:flex md:max-w-2xl md:flex-col lg:max-w-3xl">
         <h1 id="landing-title" className="mt-6 ml-auto mr-auto mb-10 flex items-center justify-center gap-2 text-center text-4xl font-semibold sm:mb-16 md:mt-[10vh]">
-          ChatGPT Clone
+          ChatGPT
         </h1>
         <div className="items-start gap-3.5 text-center md:flex">
           <div className="mb-8 flex flex-1 flex-col gap-3.5 md:mb-auto">
@@ -46,19 +46,19 @@ export default function Landing() {
                 onClick={clickHandler}
                 className="w-full rounded-md bg-gray-50 p-3 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-gray-900"
               >
-                &quot;Explain quantum computing in simple terms&quot; →
+                &quot;简单解释一下什么是量子计算&quot; →
               </button>
               <button
                 onClick={clickHandler}
                 className="w-full rounded-md bg-gray-50 p-3 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-gray-900"
               >
-                &quot;Got any creative ideas for a 10 year old&apos;s birthday?&quot; →
+                &quot;设计一个十岁小朋友的生日派对&apos;s birthday?&quot; →
               </button>
               <button
                 onClick={clickHandler}
                 className="w-full rounded-md bg-gray-50 p-3 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-gray-900"
               >
-                &quot;How do I make an HTTP request in Javascript?&quot; →
+                &quot;用Python写出梯度下降的代码示例&quot; →
               </button>
             </ul>
           </div>
@@ -69,13 +69,13 @@ export default function Landing() {
             </h2>
             <ul className="m-auto flex w-full flex-col gap-3.5 sm:max-w-md">
               <li className="w-full rounded-md bg-gray-50 p-3 dark:bg-white/5">
-                Remembers what user said earlier in the conversation
+              可以为用户提供连续对话
               </li>
               <li className="w-full rounded-md bg-gray-50 p-3 dark:bg-white/5">
-                Allows user to provide follow-up corrections
+              允许用户提供后续更正
               </li>
               <li className="w-full rounded-md bg-gray-50 p-3 dark:bg-white/5">
-                Trained to decline inappropriate requests
+              主动拒绝不适宜对话
               </li>
             </ul>
           </div>
@@ -86,13 +86,13 @@ export default function Landing() {
             </h2>
             <ul className="m-auto flex w-full flex-col gap-3.5 sm:max-w-md">
               <li className="w-full rounded-md bg-gray-50 p-3 dark:bg-white/5">
-                May occasionally generate incorrect information
+              可能偶尔会产生不正确的信息
               </li>
               <li className="w-full rounded-md bg-gray-50 p-3 dark:bg-white/5">
-                May occasionally produce harmful instructions or biased content
+              可能偶尔会产生有偏见的内容
               </li>
               <li className="w-full rounded-md bg-gray-50 p-3 dark:bg-white/5">
-                Limited knowledge of world and events after 2021
+              可能对最新的互联网内容不熟悉
               </li>
             </ul>
           </div>

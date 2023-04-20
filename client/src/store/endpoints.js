@@ -3,10 +3,7 @@ import { atom, selector } from 'recoil';
 const endpointsConfig = atom({
   key: 'endpointsConfig',
   default: {
-    azureOpenAI: null,
     openAI: null,
-    bingAI: null,
-    chatGPTBrowser: null
   }
 });
 
@@ -24,7 +21,7 @@ const endpointsFilter = selector({
 const availableEndpoints = selector({
   key: 'availableEndpoints',
   get: ({ get }) => {
-    const endpoints = ['azureOpenAI', 'openAI', 'bingAI', 'chatGPTBrowser'];
+    const endpoints = ['openAI'];
     const f = get(endpointsFilter);
     return endpoints.filter(endpoint => f[endpoint]);
   }

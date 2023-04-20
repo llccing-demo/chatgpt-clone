@@ -50,7 +50,7 @@ const EndpointOptionsDialog = ({ open, onOpenChange, preset: _preset, title }) =
         onOpenChange={onOpenChange}
       >
         <DialogTemplate
-          title={`${title || 'View Options'} - ${preset?.endpoint}`}
+          title={`${title || '查看设置'} - ${preset?.endpoint}`}
           className="max-w-full sm:max-w-4xl"
           main={
             <div className="flex w-full flex-col items-center gap-2">
@@ -69,20 +69,11 @@ const EndpointOptionsDialog = ({ open, onOpenChange, preset: _preset, title }) =
                 onClick={saveAsPreset}
                 className="dark:hover:gray-400 border-gray-700 bg-green-600 text-white hover:bg-green-700 dark:hover:bg-green-800"
               >
-                Save As Preset
+                保存设置
               </DialogButton>
             </>
           }
-          leftButtons={
-            <>
-              <DialogButton
-                onClick={exportPreset}
-                className="dark:hover:gray-400 border-gray-700"
-              >
-                Export
-              </DialogButton>
-            </>
-          }
+
         />
       </Dialog>
       <SaveAsPresetDialog

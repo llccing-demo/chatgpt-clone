@@ -2,11 +2,11 @@ import React from 'react';
 import { HoverCardPortal, HoverCardContent } from '~/components/ui/HoverCard.tsx';
 
 const types = {
-  temp: 'Higher values = more random, while lower values = more focused and deterministic. We recommend altering this or Top P but not both.',
+  temp: '该值越大,回答的内容越具有生成性和随机性.',
   max: "The max tokens to generate. The total length of input tokens and generated tokens is limited by the model's context length.",
-  topp: 'An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We recommend altering this or temperature but not both.',
-  freq: "Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.",
-  pres: "Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics."
+  topp: '该值越大,回答的内容越具有准确性(不建议和随机度一起使用)',
+  freq: "根据已回答文本中单词的出现频率,惩罚模型.(正值会减少重复，负值会增加重复,0无影响)",
+  pres: "根据新生成的单词是否已经在已生成的文本中出现过,惩罚模型.(正值会增加新内容生成概率，负值减少新内容生成概率,0无影响)"
 };
 
 function OptionHover({ type, side }) {

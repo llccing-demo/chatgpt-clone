@@ -22,7 +22,7 @@ export default function SearchBar({ clearSearch }) {
         className="m-0 mr-0 w-full border-none bg-transparent p-0 text-sm leading-tight outline-none"
         value={searchQuery}
         onChange={e => setSearchQuery(e.target.value)}
-        placeholder="Search messages"
+        placeholder="搜索对话"
         onKeyUp={handleKeyUp}
       />
     </div>

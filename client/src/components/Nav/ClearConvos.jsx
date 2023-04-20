@@ -30,7 +30,7 @@ export default function ClearConvos() {
           // onClick={clickHandler}
         >
           <TrashIcon />
-          Clear conversations
+          清除对话
         </button>
       </DialogTrigger>
       <DialogTemplate

@@ -17,7 +17,7 @@ export default function Logout() {
     >
       <LogOutIcon />
       {user?.display || user?.username || 'USER'}
-      <small>Log out</small>
+      {/* <small>Log out</small> */}
     </button>
   );
 }

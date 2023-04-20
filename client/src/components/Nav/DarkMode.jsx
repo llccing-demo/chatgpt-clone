@@ -7,7 +7,7 @@ export default function DarkMode() {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const clickHandler = () => setTheme(theme === 'dark' ? 'light' : 'dark');
-  const mode = theme === 'dark' ? 'Light mode' : 'Dark mode';
+  const mode = theme === 'dark' ? '日间模式' : '夜晚模型';
 
   return (
     <button

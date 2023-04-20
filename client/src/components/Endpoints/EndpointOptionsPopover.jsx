@@ -30,7 +30,7 @@ function EndpointOptionsPopover({ content, visible, saveAsPreset, switchToSimple
               onClick={saveAsPreset}
             >
               <Save className="mr-1 w-[14px]" />
-              Save as preset
+              保存设置
             </Button>
             <Button
               type="button"

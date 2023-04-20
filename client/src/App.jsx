@@ -8,6 +8,7 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import { ScreenshotProvider } from './utils/screenshotContext.jsx';
 import { useGetSearchEnabledQuery, useGetUserQuery, useGetEndpointsQuery, useGetPresetsQuery} from '~/data-provider';
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools';
+import ApiKeyModal from './components/ApiKeyModal.jsx';
 
 const router = createBrowserRouter([
   {

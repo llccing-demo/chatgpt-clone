@@ -48,38 +48,20 @@ function Settings(props) {
               containerClassName="flex w-full resize-none"
             />
           </div>
-          <div className="grid w-full items-center gap-2">
-            <Label
-              htmlFor="chatGptLabel"
-              className="text-left text-sm font-medium"
-            >
-              Custom Name <small className="opacity-40">(default: blank)</small>
-            </Label>
-            <Input
-              id="chatGptLabel"
-              disabled={readonly}
-              value={chatGptLabel || ''}
-              onChange={e => setChatGptLabel(e.target.value || null)}
-              placeholder="Set a custom name for ChatGPT"
-              className={cn(
-                defaultTextProps,
-                'flex h-10 max-h-10 w-full resize-none px-3 py-2 focus:outline-none focus:ring-0 focus:ring-opacity-0 focus:ring-offset-0'
-              )}
-            />
-          </div>
+          
           <div className="grid w-full items-center gap-2">
             <Label
               htmlFor="promptPrefix"
               className="text-left text-sm font-medium"
             >
-              Prompt Prefix <small className="opacity-40">(default: blank)</small>
+              角色扮演 <small className="opacity-40"><a href="">(默认:空)</a></small>
             </Label>
             <TextareaAutosize
               id="promptPrefix"
               disabled={readonly}
               value={promptPrefix || ''}
               onChange={e => setPromptPrefix(e.target.value || null)}
-              placeholder="Set custom instructions. Defaults to: 'You are ChatGPT, a large language model trained by OpenAI.'"
+              placeholder="我想让你担任期刊审稿人。您需要···"
               className={cn(
                 defaultTextProps,
                 'flex max-h-[300px] min-h-[100px] w-full resize-none px-3 py-2 '
@@ -95,7 +77,7 @@ function Settings(props) {
                   htmlFor="temp-int"
                   className="text-left text-sm font-medium"
                 >
-                  Temperature <small className="opacity-40">(default: 1)</small>
+                  随机度 <small className="opacity-40">(默认值: 1)</small>
                 </Label>
                 <InputNumber
                   id="temp-int"
@@ -138,7 +120,7 @@ function Settings(props) {
                   htmlFor="top-p-int"
                   className="text-left text-sm font-medium"
                 >
-                  Top P <small className="opacity-40">(default: 1)</small>
+                  准确度 <small className="opacity-40">(默认值: 1)</small>
                 </Label>
                 <InputNumber
                   id="top-p-int"
@@ -182,7 +164,7 @@ function Settings(props) {
                   htmlFor="freq-penalty-int"
                   className="text-left text-sm font-medium"
                 >
-                  Frequency Penalty <small className="opacity-40">(default: 0)</small>
+                  频率惩罚 <small className="opacity-40">(默认值: 0)</small>
                 </Label>
                 <InputNumber
                   id="freq-penalty-int"
@@ -226,7 +208,7 @@ function Settings(props) {
                   htmlFor="pres-penalty-int"
                   className="text-left text-sm font-medium"
                 >
-                  Presence Penalty <small className="opacity-40">(default: 0)</small>
+                  存在处罚 <small className="opacity-40">(默认值: 0)</small>
                 </Label>
                 <InputNumber
                   id="pres-penalty-int"

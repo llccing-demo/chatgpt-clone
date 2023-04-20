@@ -289,7 +289,7 @@ export default function ExportModel({ open, onOpenChange }) {
       onOpenChange={onOpenChange}
     >
       <DialogTemplate
-        title="Export conversation"
+        title="导出会话"
         className="max-w-full sm:max-w-2xl"
         main={
           <div className="flex w-full flex-col items-center gap-6">
