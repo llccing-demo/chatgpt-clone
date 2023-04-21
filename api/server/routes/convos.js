@@ -6,6 +6,7 @@ const { getConvosByPage, deleteConvos } = require('../../models/Conversation');
 const { getMessages } = require('../../models/Message');
 
 router.get('/', async (req, res) => {
+  console.warn('get the apiKey from client', req.headers.authorization);
   const pageNumber = req.query.pageNumber || 1;
   res.status(200).send(await getConvosByPage(req?.session?.user?.username, pageNumber));
 });

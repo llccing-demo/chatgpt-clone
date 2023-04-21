@@ -8,6 +8,7 @@ export default function Logout() {
 
   const clickHandler = () => {
     window.location.href = '/auth/logout';
+    localStorage.removeItem('apiKey');
   };
 
   return (

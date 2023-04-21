@@ -1,4 +1,10 @@
 import axios, { AxiosRequestConfig } from "axios";
+import { setApiKeyHeader } from './headers-helpers.js'
+
+const apiKey = localStorage.getItem('apiKey');
+if (apiKey) {
+  setApiKeyHeader(apiKey);
+}
 
 async function _get<T>(url: string, options?: AxiosRequestConfig): Promise<T> {
   const response = await axios.get(url, { withCredentials: true, ...options});

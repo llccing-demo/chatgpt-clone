@@ -20,13 +20,11 @@ export function clearAllConversations(): Promise<unknown> {
 }
 
 export function getMessagesByConvoId(id: string): Promise<t.TMessage[]> {
-  const apiKey = localStorage.getItem('apiKey'); // 获取保存的 API key
-  return request.get(endpoints.messages(id),apiKey);
+  return request.get(endpoints.messages(id));
 }
 
 export function getConversationById(id: string): Promise<t.TConversation> {
-  const apiKey = localStorage.getItem('apiKey'); // 获取保存的 API key
-  return request.get(endpoints.conversationById(id),apiKey);
+  return request.get(endpoints.conversationById(id));
 }
 
 export function updateConversation(

@@ -155,10 +155,12 @@ export default function MessageHandler() {
     console.log(submission);
     const { endpoint } = submission?.conversation || {};
 
+    const apiKey = localStorage.getItem('apiKey');
     fetch(`/api/ask/${endpoint}/abort`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + apiKey
       },
       body: JSON.stringify({
         abortKey: conversationId
@@ -184,10 +186,13 @@ export default function MessageHandler() {
     let { message } = submission;
 
     const { server, payload } = createPayload(submission);
-
+    const apiKey = localStorage.getItem('apiKey');
     const events = new SSE(server, {
       payload: JSON.stringify(payload),
-      headers: { 'Content-Type': 'application/json' }
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + apiKey
+      }
     });
 
     events.onmessage = e => {

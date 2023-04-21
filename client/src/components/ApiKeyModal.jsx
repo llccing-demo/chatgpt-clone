@@ -2,6 +2,7 @@ import { h, render } from 'https://esm.sh/preact';
 import htm from 'https://esm.sh/htm';
 import { useState } from 'https://esm.sh/preact/hooks'
 import { signal } from 'https://esm.sh/@preact/signals'
+import { setApiKeyHeader } from '~/data-provider';
 
 
 
@@ -58,6 +59,7 @@ function ApiKeyModal({ visible, setVisible }) {
       const myModal = document.getElementById('modals');
 
       localStorage.setItem('apiKey', apiKey)
+      setApiKeyHeader(apiKey)
       myModal.style.display = 'none';
       // setVisible(false)
     }
