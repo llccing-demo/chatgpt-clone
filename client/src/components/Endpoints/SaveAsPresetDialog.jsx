@@ -9,7 +9,7 @@ import cleanupPreset from '~/utils/cleanupPreset';
 import { useCreatePresetMutation } from '~/data-provider';
 import store from '~/store';
 
-const SaveAsPresetDialog = ({ open, onOpenChange, preset }) => {
+const SaveAsPresetDialog = ({ open, onOpenChange, onSubmit, preset }) => {
   const [title, setTitle] = useState(preset?.title || 'My Preset');
   const endpointsConfig = useRecoilValue(store.endpointsConfig);
   const createPresetMutation = useCreatePresetMutation();
@@ -26,6 +26,7 @@ const SaveAsPresetDialog = ({ open, onOpenChange, preset }) => {
       endpointsConfig
     });
     createPresetMutation.mutate(_preset);
+    onSubmit();
   };
 
   useEffect(() => {

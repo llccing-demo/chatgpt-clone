@@ -6,7 +6,6 @@ import getIcon from '~/utils/getIcon';
 
 export default function PresetItem({ preset = {}, value, onSelect, onChangePreset, onDeletePreset }) {
   const { endpoint } = preset;
-
   const icon = getIcon({
     size: 20,
     endpoint: preset?.endpoint,
@@ -41,6 +40,9 @@ export default function PresetItem({ preset = {}, value, onSelect, onChangePrese
     <DropdownMenuRadioItem
       value={value}
       className="group dark:font-semibold dark:text-gray-100 dark:hover:bg-gray-800"
+      onClick={() => {
+        onSelect(preset);
+      }}
     >
       {icon}
       {preset?.title}

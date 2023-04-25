@@ -30,7 +30,7 @@ export default function NewConversationMenu() {
   const [presets, setPresets] = useRecoilState(store.presets);
 
   const conversation = useRecoilValue(store.conversation) || {};
-  const { endpoint, conversationId } = conversation;
+  const { endpoint, promptPrefix, conversationId } = conversation;
   const { newConversation } = store.useConversation();
 
   const deletePresetsMutation = useDeletePresetMutation();
@@ -180,8 +180,9 @@ export default function NewConversationMenu() {
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuRadioGroup
-            onValueChange={onSelectPreset}
-            className="overflow-y-auto"
+            value={ promptPrefix }
+            // onValueChange={onSelectPreset}
+            className="overflow-y-auto max-h-[60vh]"
           >
             {presets.length ? (
               <PresetItems

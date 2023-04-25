@@ -25,24 +25,7 @@ const MessageHeader = ({ isSearchView = false }) => {
   const getConversationTitle = () => {
     if (isSearchView) return `Search: ${searchQuery}`;
     else {
-      let _title = `${endpoint}`;
-
-      if (endpoint === 'azureOpenAI' || endpoint === 'openAI') {
-        const { chatGptLabel, model } = conversation;
-        if (model) _title += `: ${model}`;
-        if (chatGptLabel) _title += ` as ${chatGptLabel}`;
-      } else if (endpoint === 'bingAI') {
-        const { jailbreak, toneStyle } = conversation;
-        if (toneStyle) _title += `: ${toneStyle}`;
-        if (jailbreak) _title += ` as Sydney`;
-      } else if (endpoint === 'chatGPTBrowser') {
-        const { model } = conversation;
-        if (model) _title += `: ${model}`;
-      } else if (endpoint === null) {
-        null;
-      } else {
-        null;
-      }
+      let _title = `正在使用: ${conversation.title}`;
       return _title;
     }
   };

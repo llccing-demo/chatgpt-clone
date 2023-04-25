@@ -100,6 +100,7 @@ function OpenAIOptions() {
       <SaveAsPresetDialog
         open={saveAsDialogShow}
         onOpenChange={setSaveAsDialogShow}
+        onSubmit={ switchToSimpleMode }
         preset={conversation}
       />
     </>

@@ -17,6 +17,7 @@ const buildDefaultConversation = ({
         'gpt-3.5-turbo',
       chatGptLabel: lastConversationSetup?.chatGptLabel ?? null,
       promptPrefix: lastConversationSetup?.promptPrefix ?? null,
+      promptPrefixId: lastConversationSetup?.presetId ?? null,
       temperature: lastConversationSetup?.temperature ?? 1,
       top_p: lastConversationSetup?.top_p ?? 1,
       presence_penalty: lastConversationSetup?.presence_penalty ?? 0,
